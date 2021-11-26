@@ -5,5 +5,5 @@ Le Dockerfile permet de build une version de code server uniquement avec les com
 ## Pour build:
 
 ```
-docker build -t ghcr.io/mhaz42/code-server-dev-nodejs:latest
+docker build -t ghcr.io/mhaz42/code-server-dev-nodejs:latest - < Dockerfile
 ```

@@ -1,6 +1,6 @@
 # docker-code-server
 
-Ce repo regroupe plusieurs version de [code-server](https://github.com/linuxserver/docker-code-server) avec plusieurs variantes
+Ce repo regroupe plusieurs versions de [code-server](https://github.com/linuxserver/docker-code-server) avec plusieurs variantes
 
 ## Variantes:
 

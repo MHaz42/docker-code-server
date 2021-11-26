@@ -5,4 +5,9 @@ RUN \
   apt-get install -y \
    python3 \
    python3-pip \
-   sqlite3
+   sqlite3 && \
+  apt-get clean && \
+  rm -rf \
+    /tmp/* \
+    /var/lib/apt/lists/* \
+    /var/tmp/*

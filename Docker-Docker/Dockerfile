@@ -16,4 +16,10 @@ RUN \
     docker-ce-cli \
     containerd.io && \
   usermod -aG docker abc && \
-  newgrp docker
+  newgrp docker && \
+  apt-get clean && \
+  rm -rf \
+    /tmp/* \
+    /var/lib/apt/lists/* \
+    /var/tmp/*
+

@@ -6,6 +6,7 @@ RUN \
     ca-certificates \
     gnupg \
     lsb-release && \
+  groupadd --gid 995 docker && \ 
   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
   echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
     $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
@@ -13,4 +14,6 @@ RUN \
   apt-get install -y \
     docker-ce\
     docker-ce-cli \
-    containerd.io
+    containerd.io && \
+  usermod -aG docker abc && \
+  newgrp docker

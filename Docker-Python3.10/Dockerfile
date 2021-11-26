@@ -1,4 +1,4 @@
-FROM code-server-dev-nodejs:latest
+FROM ghcr.io/mhaz42/code-server-dev-nodejs:latest
 
 RUN \
   apt-get update && \

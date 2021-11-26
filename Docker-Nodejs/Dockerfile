@@ -1,4 +1,4 @@
-FROM code-server-dev:latest
+FROM ghcr.io/mhaz42/code-server-dev:latest
 
 RUN \
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash && \

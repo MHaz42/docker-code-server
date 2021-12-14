@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/code-server:arm32v7-focal
+FROM ghcr.io/linuxserver/code-server:latest
 
 RUN \
   apt-get update && \

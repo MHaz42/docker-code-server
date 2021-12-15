@@ -1,0 +1,27 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker-Vanilla image
+      run: docker build . --file Docker-Vanilla/Dockerfile --tag ghcr.io/mhaz42/code-server-dev:latest
+      
+    - name: Build the Docker-Nodejs image
+      run: docker build . --file Docker-Nodejs/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-nodejs:latest
+      
+    - name: Build the Docker-Python image
+      run: docker build . --file Docker-Python3.10/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-python:latest
+      
+    - name: Build the Docker-Docker image
+      run: docker build . --file Docker-Docker/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-docker:latest

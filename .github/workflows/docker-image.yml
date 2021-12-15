@@ -13,7 +13,7 @@ jobs:
     - name: Login to Github Packages
     - run: docker login -u mhaz42 ghcr.io -p ${{secrets.GHCR_PAT}}
     
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2.4.0
     - name: Build the Docker-Vanilla image
       run: docker build . --file Docker-Vanilla/Dockerfile --tag ghcr.io/mhaz42/code-server-dev:latest
       

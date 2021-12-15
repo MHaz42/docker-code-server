@@ -11,9 +11,15 @@ jobs:
 
     steps:
     - name: Login to Github Packages
-    - run: docker login -u mhaz42 ghcr.io -p ${{secrets.GHCR_PAT}}
+      uses: docker/login-action@v1.10.0
+      with:
+        registry: ghcr.io
+        username: mhaz42
+        password: ${{secrets.GHCR_PAT}}
     
-    - uses: actions/checkout@v2.4.0
+    - name: Checkout
+      uses: actions/checkout@v2.4.0
+    
     - name: Build the Docker-Vanilla image
       run: docker build . --file Docker-Vanilla/Dockerfile --tag ghcr.io/mhaz42/code-server-dev:latest
       
@@ -37,3 +43,5 @@ jobs:
       
     - name: Publish the container on ghcr.io
       run: docker push ghcr.io/mhaz42/code-server-dev-docker:latest
+      
+  

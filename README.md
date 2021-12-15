@@ -1,13 +1,13 @@
 # docker-code-server
 
-Ce repo regroupe plusieurs variante de [code-server](https://github.com/linuxserver/docker-code-server).
+Ce repo regroupe plusieurs variantes de [code-server](https://github.com/linuxserver/docker-code-server).
 
 ## Variantes:
 
-- Vanilla : ajoute uniquement les compilateurs C/C++ avec htop et jre 
+- [Vanilla](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Vanilla) : ajoute uniquement les compilateurs C/C++ avec htop et jre 
 
-- Node-js : ajoute les versions 12 et 16 de Node-js grâce à [nvm](https://github.com/nvm-sh/nvm)
+- [Node-js](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Nodejs) : ajoute les versions 12 et 16 de Node-js grâce à [nvm](https://github.com/nvm-sh/nvm)
 
-- Python : ajoute Python3 (v3.8.10) et sqlite3 (v3.31.1)
+- [Python](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Python3.10) : ajoute Python3 (v3.8.10) et sqlite3 (derniere version disponible via apt-get)
 
-- Docker : ajoute Docker in Docker
+- [Docker](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Docker) : ajoute Docker in Docker

@@ -32,12 +32,6 @@ jobs:
     - name: Publish the container on ghcr.io
       run: docker push ghcr.io/mhaz42/code-server-dev-nodejs:latest
       
-    - name: Build the Docker-Python image
-      run: docker build . --file Docker-Python3.10/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-python:latest
-      
-    - name: Publish the container on ghcr.io
-      run: docker push ghcr.io/mhaz42/code-server-dev-python:latest
-      
     - name: Build the Docker-Docker image
       run: docker build . --file Docker-Docker/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-docker:latest
       

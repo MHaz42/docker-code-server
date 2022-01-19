@@ -1,11 +1,11 @@
-FROM ghcr.io/mhaz42/code-server-dev-nodejs:latest
+FROM ghcr.io/mhaz42/code-server-dev-nodejs:armlatest
 
 RUN \
   apt-get update && \
   apt-get install -y \
-   python3 \
-   python3-pip \
-   sqlite3 && \
+    python3 \
+    python3-pip \
+    sqlite3 && \
   apt-get clean && \
   rm -rf \
     /tmp/* \

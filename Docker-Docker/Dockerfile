@@ -1,4 +1,4 @@
-FROM ghcr.io/mhaz42/code-server-dev-python:latest
+FROM ghcr.io/mhaz42/code-server-dev-python:armlatest
 
 RUN \
   apt-get update && \

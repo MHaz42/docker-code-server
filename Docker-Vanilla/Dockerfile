@@ -1,12 +1,10 @@
 FROM ghcr.io/linuxserver/code-server:latest
 
 RUN \
-  apt-get update && \
-  apt-get install -y \
-    gnupg && \
   echo "**** install build dependencies ****" && \
   apt-get update && \
   apt-get install -y \
+    gnupg \
     build-essential \
     libx11-dev \
     libxkbfile-dev \

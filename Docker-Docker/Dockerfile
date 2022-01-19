@@ -1,4 +1,4 @@
-FROM ghcr.io/mhaz42/code-server-dev-python:arm64latest
+FROM ghcr.io/mhaz42/code-server-dev-nodejs:arm64latest
 
 RUN \
   apt-get update && \

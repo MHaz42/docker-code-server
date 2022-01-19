@@ -1,4 +1,4 @@
-FROM ghcr.io/linuxserver/code-server:arm32v7-latest
+FROM ghcr.io/linuxserver/code-server:arm64v8-latest
 
 RUN \
   apt-get update && \

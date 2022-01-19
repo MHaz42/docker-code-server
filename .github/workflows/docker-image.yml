@@ -1,0 +1,41 @@
+name: Docker Image CI
+
+on:
+  workflow_dispatch:
+    
+jobs:
+
+  build:
+
+    runs-on: uself-hosted
+
+    steps:
+    - name: Login to Github Packages
+      uses: docker/login-action@v1.10.0
+      with:
+        registry: ghcr.io
+        username: mhaz42
+        password: ${{secrets.GHCR_PAT}}
+    
+    - name: Checkout
+      uses: actions/checkout@v2.4.0
+    
+    - name: Build the Docker-Vanilla image
+      run: docker build . --file Docker-Vanilla/Dockerfile --tag ghcr.io/mhaz42/code-server-dev:arm64latest
+      
+    - name: Publish the container on ghcr.io
+      run: docker push ghcr.io/mhaz42/code-server-dev:arm64latest
+      
+    - name: Build the Docker-Nodejs image
+      run: docker build . --file Docker-Nodejs/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-nodejs:arm64latest
+      
+    - name: Publish the container on ghcr.io
+      run: docker push ghcr.io/mhaz42/code-server-dev-nodejs:arm64latest
+      
+    - name: Build the Docker-Docker image
+      run: docker build . --file Docker-Docker/Dockerfile --tag ghcr.io/mhaz42/code-server-dev-docker:arm64latest
+      
+    - name: Publish the container on ghcr.io
+      run: docker push ghcr.io/mhaz42/code-server-dev-docker:arm64latest
+      
+  

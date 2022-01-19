@@ -7,7 +7,7 @@ jobs:
 
   build:
 
-    runs-on: uself-hosted
+    runs-on: self-hosted
 
     steps:
     - name: Login to Github Packages

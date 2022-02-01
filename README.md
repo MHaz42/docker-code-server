@@ -8,6 +8,4 @@ Ce repo regroupe plusieurs variantes de [code-server](https://github.com/linuxse
 
 - [Node-js](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Nodejs) : ajoute les versions 12 et 16 de Node-js grâce à [nvm](https://github.com/nvm-sh/nvm)
 
-- [Python](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Python3.10) : ajoute Python3 (v3.8.10) et sqlite3 (derniere version disponible via apt-get)
-
 - [Docker](https://github.com/MHaz42/docker-code-server/tree/master/Docker-Docker) : ajoute Docker in Docker
